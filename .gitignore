@@ -1,0 +1,4 @@
+target/*
+MDI-Calc.iml
+.idea/*
+*.jar

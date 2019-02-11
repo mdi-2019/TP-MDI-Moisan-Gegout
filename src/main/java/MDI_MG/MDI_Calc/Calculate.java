@@ -19,7 +19,7 @@ public class Calculate {
         isOn = true;
         Scanner scan = new Scanner(System.in);
 
-        ChooseCalculateMode(scan, mode);
+        mode = ChooseCalculateMode(scan, mode);
         Normal nor = new Normal();
         Scientifique sci = new Scientifique();
 
@@ -33,14 +33,14 @@ public class Calculate {
             }
             else {
                 System.out.println("Mode Scientifique");
-                //prec = sci.init(prec,scan);
+                prec = sci.init(prec,scan);
             }
 
             System.out.println("Le résultat est : "+prec);
         }
     }
 
-    public static void ChooseCalculateMode(Scanner scan, boolean mode)
+    public static boolean ChooseCalculateMode(Scanner scan, boolean mode)
     {
         System.out.println("Rentrez le mode de la calculatrice que vous voulez utiliser : ");
         System.out.println("Appuyez sur 1 : Mode normale");
@@ -60,5 +60,7 @@ public class Calculate {
         {
             System.out.println("Saisie incorrect");
         }
+
+        return mode;
     }
 }

@@ -59,9 +59,9 @@ public class Scientifique {
 
     //
     private double calc_power(double in, Scanner scan){
-        org.apache.commons.math3.analysis.function.Power power = new org.apache.commons.math3.analysis.function.Power(in);
         System.out.println("Choissisez la puissance à appliquer");
         int answer = scan.nextInt();
-        return power.value(answer);
+        org.apache.commons.math3.analysis.function.Power power = new org.apache.commons.math3.analysis.function.Power(answer);
+        return power.value(in);
     }
 }

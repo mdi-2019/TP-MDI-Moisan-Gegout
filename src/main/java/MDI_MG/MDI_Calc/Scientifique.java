@@ -10,7 +10,7 @@ public class Scientifique {
 
     public double init(double prec, Scanner scan) {
         System.out.println("Choississez la fonction que vous voulez appliquer sur " + prec);
-        System.out.println("1 : racine carré\n2 : sinus\n3 : cosinus\n4 : tangente\n5 : puissance");
+        System.out.println("1 : racine carré\n2 : sinus\n3 : cosinus\n4 : tangente\n5 : puissance\n6 : remise à zéro");
         int answer = scan.nextInt();
 
         double out = 0;
@@ -24,6 +24,8 @@ public class Scientifique {
             case 4: out = calc_tan(prec,scan);
                 break;
             case 5: out = calc_power(prec,scan);
+                break;
+            case 6: prec = 0.0;
                 break;
             default: System.out.println("Saisie incorrecte");
         }

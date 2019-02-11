@@ -33,10 +33,11 @@ public class Calculate {
             }
             else {
                 System.out.println("Mode Scientifique");
-                prec = sci.init(prec,scan);
+                prec = sci.init(prec, scan);
             }
 
             System.out.println("Le résultat est : "+prec);
+            mode = ChooseCalculateMode(scan, mode);
         }
     }
 

@@ -1,6 +1,8 @@
 package MDI_MG.MDI_Calc;
 
 import java.util.*;
+import MDI_MG.MDI_Calc.Normal;
+import MDI_MG.MDI_Calc.Scientifique;
 
 public class Calculate {
     private boolean isOn = false;
@@ -16,11 +18,24 @@ public class Calculate {
         Scanner scan = new Scanner(System.in);
 
         ChooseCalculateMode(scan);
+        Normal nor = new Normal();
+        Scientifique sci = new Scientifique();
 
         //Boucle de fonctionnement de la calculatrice
         while(isOn)
         {
-            if()
+            // On informe l'utilisateur du mode actuel
+            if(!mode) {
+                System.out.println("Mode Normal");
+                prec = nor.init(prec);
+            } else {
+                System.out.println("Mode Scientifique");
+                prec = sci.init(prec);
+            }
+
+
+
+
         }
     }
 

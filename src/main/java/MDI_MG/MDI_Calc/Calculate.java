@@ -27,15 +27,14 @@ public class Calculate {
             // On informe l'utilisateur du mode actuel
             if(!mode) {
                 System.out.println("Mode Normal");
-                prec = nor.init(prec);
-            } else {
+                prec = nor.init(prec,scan);
+            }
+            else {
                 System.out.println("Mode Scientifique");
-                prec = sci.init(prec);
+                prec = sci.init(prec,scan);
             }
 
-
-
-
+            System.out.println("Le résultat est : "+prec);
         }
     }
 

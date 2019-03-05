@@ -86,5 +86,10 @@ public class Normal {
         System.out.println("Erreur : division par 0 !");
         return prec;
     }
+
+    public void codemort()
+    {
+        System.out.println("Ceci est un code mort");
+    }
 }
 

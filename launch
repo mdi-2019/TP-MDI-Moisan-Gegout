@@ -3,5 +3,4 @@
 mvn clean
 mvn dependency:purge-local-repository
 mvn test
-mvn build
 mvn package

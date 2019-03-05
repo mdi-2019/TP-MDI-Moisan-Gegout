@@ -27,8 +27,10 @@
     	<version>3.6.1</version>
 	</dependency>
   </dependencies>
+
   <build>
     <plugins>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
@@ -51,6 +53,28 @@
             </execution>
         </executions>
       </plugin>
+
+        <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.7.6.201602180812</version>
+            <executions>
+                <execution>
+                    <id>jacoco-initialize</id>
+                    <goals>
+                        <goal>prepare-agent</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>jacoco-site</id>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>report</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+
       <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
@@ -63,18 +87,22 @@
                 </execution>
           </executions>
         </plugin>
+
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-site-plugin</artifactId>
             <version>3.7.1</version>
         </plugin>
+
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-project-info-reports-plugin</artifactId>
             <version>3.0.0</version>
         </plugin>
+
     </plugins>
   </build>
+
   <reporting>
     <plugins>
         <plugin>
@@ -91,17 +119,18 @@
                 </reportSet>
             </reportSets>
         </plugin>
-        <plugin>
-            <groupId>org.jacoco</groupId>
-            <artifactId>jacoco-maven-plugin</artifactId>
-            <reportSets>
-                <reportSet>
-                    <reports>
-                        <report>report</report>
-                    </reports>
-                </reportSet>
-            </reportSets>
-        </plugin>
+
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>report</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
     </plugins>
   </reporting>
 </project>

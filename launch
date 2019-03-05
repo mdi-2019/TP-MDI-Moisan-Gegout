@@ -1,0 +1,6 @@
+
+
+mvn clean
+mvn dependency:purge-local-repository
+mvn test
+mvn clean package
